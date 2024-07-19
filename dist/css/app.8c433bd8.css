@@ -1,0 +1,1 @@
+.text-tags{flex-wrap:nowrap;overflow:hidden}.text-tags,.text-tags__item{display:flex;align-items:center}.text-tags__item,.text-tags__text{margin:0 4px}.text-tags--left{justify-content:flex-start}.text-tags--justified{justify-content:space-between}.full-width{width:100%;margin-bottom:16px}.half-width{width:50%;margin-bottom:16px}
