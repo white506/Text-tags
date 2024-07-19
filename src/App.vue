@@ -1,28 +1,58 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-container>
+      <text-tags
+        :tags="tags"
+        alignment="left"
+        class="full-width"
+      />
+      <text-tags
+        :tags="tags"
+        alignment="justified"
+        class="full-width"
+      />
+      <text-tags
+        :tags="tags"
+        alignment="left"
+        class="half-width"
+      />
+      <text-tags
+        :tags="tags"
+        alignment="justified"
+        class="half-width"
+      />
+    </v-container>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TextTags from './components/TextTags.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TextTags
+  },
+  data() {
+    return {
+      tags: [
+        { text: '4,3', icon: 'mdi-star' },
+        { text: 'Фридланские ворота' },
+        { text: '1,2 км от вас' }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.half-width {
+  width: 50%;
+  margin-bottom: 16px;
 }
 </style>
